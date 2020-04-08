@@ -1,0 +1,28 @@
+@import './_variables';
+
+html{
+    height: 100%;
+    body{
+       @extend html;
+        app-root{
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            main{
+                flex: auto;
+                flex-shrink: 0
+            }
+            header{
+                flex-shrink: 0;
+            }
+            footer{
+                @extend header;
+            }
+
+        }
+
+    }
+}
